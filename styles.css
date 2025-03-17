@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: "Roboto";
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 1fr 3.5fr;
+    min-height: 100vh;
+}
+
+#sideBar {
+    background-color: #1892d3; 
+    color: white;  
+    padding: 24px;
+}
+
+#logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 6vh;
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-logo {
+    fill: white;
+    width: 3rem;
+    margin-right: 12px;
+}
+
+#mainNav > div,
+#suppNav > div {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: min(2.5vh, 100px);
+    display: flex;
+    align-items: center;
+}
+
+#mainNav > div > svg, 
+#suppNav > div > svg {
+    fill: white;
+    width: 1.7rem;
+    margin-right: 2rem;
+}
+
+#suppNav {
+    margin-top: 10vh;
+}
+
+#topBar {
+    padding-top: 24px;
+    padding-left: 48px;
+    padding-bottom: 20px;
+    padding-right: 8vh;
+    position: relative;
+    z-index: 100;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.42);
+}
+
+#searchBar svg {
+    fill: rgb(57, 56, 56);
+    width: 1.5rem;
+}
+
+form {
+    display: inline;
+    margin-left: 24px;
+}
+
+input {
+    background-color: #e1e8f0;
+    border: none;
+    border-radius: 1rem;
+    height: 2rem;
+    width: 40vw;
+}
+
+#searchBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.right > img {
+    width: 3.2rem;
+    border-radius: 50%;
+}
+
+#myAccount {
+    display: flex;
+    align-items: center;
+    margin-top: 4vh;
+    justify-content: space-between;
+}
+
+#myAccount img {
+    width: 5rem;
+    border-radius: 50%;
+}
+
+#myAccount .left {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-weight: 600;
+}
+
+#myAccount .left div div{
+    font-weight: 800;
+    font-size: 1.5rem;
+    padding: 0px;
+    padding-top: 4px;
+}
+
+.right button {
+    color: white;
+    border: none;
+    background-color: #1892d3;
+    padding: 12px 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 24px;
+}
+
+#infoPanel {
+    background-color: #e1e8f0;
+    display: grid;
+    grid-template-columns: 2.3fr 1fr;
+    flex: 1;
+}
+
+.tile {
+    background-color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.42);
+}
+
+#project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+/* Left border strip */
+.card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 8px;
+    height: 100%;
+    background-color: #f4b400; /* Yellow left border */
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+/* Title styling */
+.card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: black;
+}
+
+/* Description styling */
+.card p {
+    margin: 0;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Footer with icons */
+.card-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+/* Icon styles */
+.card-footer svg {
+    width: 20px;
+    height: 20px;
+    fill: #444;
+    cursor: pointer;
+    transition: fill 0.2s ease-in-out;
+}
+
+.card-footer svg:hover {
+    fill: #000;
+}
+
+#infoPanel > div > p {
+    padding: 0px 20px;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+#rightBar {
+    padding-right: 24px;
+}
+
+.card-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+/* Individual card item */
+.card-item {
+    padding-bottom: 16px;
+}
+
+/* Title styling */
+.card-item h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: black;
+}
+
+/* Description styling */
+.card-item p {
+    margin: 4px 0 0 0;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Divider between items */
+.card-item:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 16px;
+}
+
+#rightBar > p {
+    padding-left: 0px !important;
+}
+
+.trending {
+    margin-top: 40px;
+}
+
+.user-list {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Individual user item */
+.user-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* User avatar */
+.user-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* User text content */
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Username */
+.user-info .username {
+    font-size: 1rem;
+    font-weight: 700;
+    color: black;
+}
+
+/* Description */
+.user-info .description {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
